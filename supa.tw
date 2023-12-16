@@ -1,0 +1,1347 @@
+:: StoryTitle
+supa lape mi li ike
+
+
+:: Story Stylesheet [stylesheet]
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas&Lato&display=swap');
+.sig {
+  text-align: center;
+  display: block;
+}
+.foot {
+  text-align: center;
+  font-size: 80%;
+}
+
+.act::before {
+  /* content: "⏵ "; */
+  content: "\e81e";
+  font-family: tme-fa-icons;
+  color: #69A;
+  font-size: 70%;
+}
+
+.nsfk {
+    color: #971818;
+    font-size: 120%;
+}
+
+.act {
+  line-height: 2.5;
+  padding: 5px;
+  display: inline;
+  border-radius: 0.71em;
+}
+
+.passage a {
+ color: #69A; 
+}
+
+body {
+  background-color: #181a1c;
+  color: #AAA299;
+  font-family: 'Lato', sans serif;
+  font-size: 140%;
+}
+
+h1 {
+  font-family: 'Mountains of Christmas', cursive, serif;
+  color: #971818;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 400%;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#passage-start img {
+  float: left;
+  margin-right: 40px;
+}
+
+#menu li a, #menu-item-saves, #menu-item-restart, #menu, #ui-bar {
+ background-color: #111;
+ color: #AAA299;
+  text-transform: none;
+}
+
+#ui-dialog-title {
+  text-transform: none;
+}
+
+#ui-bar-history [id|="history"], #ui-bar-toggle {
+  color: #AAA299;
+}
+
+blockquote {
+  background-color: red;
+  margin: 0 0 0 0;
+}
+
+
+:: Story JavaScript [script]
+Config.history.controls = false;
+
+l10nStrings.identity = "musi toki";
+l10nStrings.ok = "pona";
+l10nStrings.cancel = "ike mi";
+l10nStrings.restartPrompt = "sina wile ala wile pali sin? sina sitelen ala e lipu la sona pi nasin sina li pakala!"
+l10nStrings.restartTitle = "pali sin";  
+l10nStrings.savesTitle = "lipu";
+l10nStrings.uiBarToggle  ='ni li open anu li pini e palisa';
+l10nStrings.uiBarBackward = 'ni li tawa pini e nasin sina';
+l10nStrings.uiBarForward  = 'ni li tawa kama e nasin sina';
+l10nStrings.uiBarJumpto   = 'ni li tawa insa e nasin sina';
+l10nStrings.savesLabelSave = 'sitelen';
+l10nStrings.savesLabelDelete = 'pakala';
+l10nStrings.savesLabelExport = 'tawa ma ante\u2026';
+l10nStrings.savesLabelImport = 'tan ma ante\u2026';
+l10nStrings.savesLabelClear = 'pakala e lipu ali!';
+l10nStrings.savesLabelSlot = 'e lipu';
+l10nStrings.savesLabelLoad = 'open';
+
+:: StoryData
+{
+   
+    "ifid": "67472524-30d5-4c58-ba8b-96e3eb6359c2"
+}
+
+:: Start
+[img[t400.png]]
+<h1>supa lape&nbsp;mi li&nbsp;ike</h1><<set $location to "tomo musi">><<run UIBar.stow()>><h2>tan jan Sepulon</h2>
+@@.nsfk; ⚠ sina jan lili (<16) la sina wile ala musi e ni. jan suli o musi pona! ⚠ @@
+
+
+sina mije. tenpo li pimeja. tenpo ni la sina pali ala.
+
+sina lukin e sitelen musi lon ilo sona. jan pona sina li pana e sitelen mute lon lipu Pepu. ni li musi mute. taso sina wile lape lili.
+
+sina pali e seme?
+
+
+@@.act; sina [[tawa lape]].@@
+@@.act; sina [[awen lukin e sitelen musi]].@@
+
+
+:: tawa lape
+<<set $location to "tomo telo">><<run UIBar.unstow()>>\
+sina moli e ilo sona li tawa tomo telo. sina telo e kiwen uta sina. 
+
+— mu!
+
+kalama a lon tomo lape sina! ni li kalama sama soweli suli. taso sina jo ala e soweli. ni li soweli ala la ni li akesi ike.
+
+@@.act;sina tawa [[weka tan tomo sina]].@@
+@@.act;sina tawa [[tomo lape sina|tomo lape mi]].@@
+
+
+:: awen lukin e sitelen musi
+<<run UIBar.unstow()>>sina: "a a a!"
+
+sitelen ni li musi suli. jan pona sina li jan musi suli. tenpo ale la ona li pana e sitelen pi pona mute.
+
+sina kute e kalama lili tan tomo lape sina. kalama li sama e tawa ma. taso ma li tawa ala.
+
+sina tawa [[tomo lape sina|tomo lape mi]].
+
+
+:: weka tan tomo sina
+<<set $location to "uta tomo">>\
+sina pilin ike tan weka sina. ken la akesi ike li lon ala. ken la ilo li kama lon. sina weka tan ilo lili la jan li toki e seme?
+
+ken la ilo utala li lon tomo moku. akesi li lon la sina ken moli e ona.
+akesi anu kon ike. lete li tawa e selo sina.
+
+@@.act; sina tawa [[tomo moku]].@@
+@@.act; akesi ike li suli taso sina lili. sina [[tawa weka]].@@
+
+
+:: tomo lape mi
+<<set $location to "tomo lape">>\
+tomo sina li pona. sina jo ala e ijo mute. supa lipu lili en poki suli wan en supa lape li lon. ale li walo.
+
+supa lape li tawa wawa li kalama. ken la soweli ike li anpa li tawa e supa.
+
+<<linkreplace "sina awen." t8n>>sina awen.
+
+— MU A!
+
+sina sona ala e toki ni. sona sina taso la ni li wile pali ike.
+
+seme li lon? akesi anu kon ike? ijo ni li moku ala moku e sina?
+
+@@.act;sina tawa [[supa lape]].@@
+@@.act;sina tawa [[weka tan tomo sina]].@@
+<</linkreplace>>
+
+
+:: supa lape
+<<if lastVisited("tomo moku") eq 1>>supa lape sina li tawa wawa. ijo ante li nasa ala.<</if>><<set $location to "tomo lape">>\
+
+sina pilin wawa. sina lon ma pi lete lili. akesi pi ma ni li lili li ike ala. lon… mu ona li wawa. taso sina wawa kin.
+
+sina tawa lili. supa lape li tawa ala.
+
+— o kama!
+
+akesi pi ma ni li toki ala. ken la kon ike li lon anpa pi supa lape sina.
+
+@@.act;sina sona e ni: sina ken ala utala e kon ike. sine tawa [[weka tan tomo sina]].@@
+@@.act;kon ike li lon ala. sina tawa [[supa lape|kama!]].@@
+
+
+
+:: tomo moku
+<<set $location to "tomo moku">>\
+tomo moku sina li lili. 
+
+— MU!
+
+ijo ike li awen lon tomo sina. <<if $joeilomoku eq 0>>ilo seme li ilo utala wawa? sina lukin insa poka pi ilo moku. taso sina jo taso e ilo lili. ilo ni li ilo utala ala. taso sina kama jo e ilo moku.<<set $joeilomoku to 1>><</if>>
+<<if $wawa lt 2>><<set $wawa += 1>><</if>>
+@@.act;sina wawa. sina tawa [[supa lape]].@@
+@@.act;ala. jan li toki e wile ona. taso sina [[tawa weka]].@@
+
+
+:: tawa weka
+<<set $location to "sinpin pi tomo sina">>\
+ma tomo li kalama ala. palisa suno taso li pana e suno.
+
+<<if hasVisited("moku")>>tomo tawa li tawa <<nasa "kalama" 1000>>.<</if>>
+<<if $joeilomoku eq 1 and lastVisited("tomo moku") eq 1>>sina jo e ilo moku lon luka sina. sina weka poki e ilo lon poki len.<</if>>
+
+@@.act;sina [[tawa tomo|tomo moku]].@@
+@@.act;sina tawa [[tomo pi telo nasa]].@@
+@@.act;sina tawa [[weka tan tomo|ma tomo]].@@
+
+
+:: kama!
+ken la soweli li mu taso. ken la sina wile lape mute. taso sina kute li anpa.
+
+pimeja suli li lon anpa pi supa lape. oko seli li lukin e sina. uta pimeja li open suli.
+
+sina pilin e kon jaki lon sinpin sina. 
+
+sina [[ken ala tawa]].
+
+
+:: StoryAuthor
+tan jan Sepulon
+
+
+:: ken ala tawa [end]
+pimeja ike li kama tawa sina. uta ona li kama suli mute. uta li jo e kiwen uta pakala.
+
+sina wile toki e ni: <<linkreplace "\"pakala!\"">>"pakala!" <<linkreplace "taso" >>taso <<timed 1s>>ijo ike li moku wawa e sina<</timed>>… 
+<<set $pini to 1>>\
+<<timed 2s>>\
+<<include "pini">>\
+<</timed>>\
+<</linkreplace>> <</linkreplace>>
+
+
+:: pini
+!pini
+//nasin sina li pini. sina kama jo e pini nanpa <<= $pini>>/10.<<if $pini eq 1>> nasin sina li lili ike. sina lukin ala a e meli pona! <</if>>
+
+mi pilin pona tan ni: sina musi e musi mi. pona! sina pilin musi la mi pilin pona mute kin.
+
+tenpo ni la o pali sin e musi. o kama jo e pini ante!
+
+@@.sig; — jan Sepulon @@
+
+//
+@@.foot;
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<<set $url to "http://supa.macache.com/splp.php?z=1&e=" + $pini + "&n=" + $nasin + "&w=" + $wawa + "&o=" + $olinmeli>>\
+//sina ken sitelen tawa mi kepeken nasin ni: jansepulon "lon" macache.com
+You can contact me at this address: jansepulon at macache.com
+Vous pouvez me contacter &agrave; l'adresse ci-dessus.
+//
+[img[$url]]
+@@
+<<timed 100ms>><<run UIBar.unstow()>><</timed>>
+
+
+:: StoryCaption
+sina lon ni: $location.
+
+<<if $joeilomoku eq 1>>sina jo e ilo moku.<</if>>
+<<if $joetelowawa eq 1>>sina jo e telo wawa.<</if>>
+
+mani sina: <<if $maniala eq 1>>ala !<<else>>mute.<</if>>
+wawa sina: <<if $wawa lt 0>>lili lili<<elseif $wawa lte 1>>lili<<elseif $wawa lte 4>>pona<<else>>suli<</if>>.
+
+
+:: tomo pi telo nasa
+<<set $location to "tomo pi telo nasa">>\
+tomo pi telo nasa li pimeja lili. <<if hasVisited("tawa meli")>>[[meli|tawa meli]]<<else>>[[meli]]<</if>> li <<= either("moku e telo nasa kili", "lukin sewi", "moku kon e palisa seli", "lukin e sinpin tomo", "moku lili e telo ona", "musi kepeken poki telo", "moku lili e telo nasa kili")>>. [[jan esun]] li <<= either("telo e supa esun", "toki ike lili", "pona e poki lon supa", "telo e poki", "lukin e sina", "lukin e meli", "kalama musi lili")>>. 
+
+sinpin tomo li kiwen loje. <<if hasVisited("sina tawa tomo telo.")>>[[lupa|lupa2]]<<else>>[[lupa]]<</if>> pi tomo telo li lon monsi tomo. anu… sina ken [[tawa ma|tawa weka]].
+
+
+:: ma tomo
+<<set $location to "ma tomo">>sina pilin ike lili. ni li nasin ike. ma tomo la ale li kalama ala li pimeja. esun li pini. jan li lape.
+
+nasin ale li nasin pi pona ala.
+
+sina tawa lon [[poka pi tomo sina|tawa weka]].
+
+
+:: jan esun
+jan esun li lili li sike. ona li telo e supa esun.
+
+<<if $maniala is 1>><<if hasVisited("tawa ma")>>ona li lukin e sina.
+
+jan esun: "sina pilin pona lon tenpo ni anu seme?"
+
+sina: "<<nasa "pona" 1000>>."
+
+sina jo e mani ala la sina esun ala.
+<<else>>sina kama la oko pi jan esun li utala wawa.
+
+ona: "sina jo e mani ala la o tawa."
+<</if>><<else>>sina kama la uta pi jan esun li tawa sewi.
+
+jan esun: "toki! sina wile e seme?"
+
+@@.act; "mi wile e [[telo nasa wawa]]."@@
+<<if $telokiliala is 0>>@@.act; "mi wile e [[telo nasa kili]]."@@
+@@.act; "mi wile e [[telo kili]]."@@
+<</if>>\
+<<if $melisona eq 1 and $joetelowawa eq 0>>@@.act;"mi wile e [[telo wawa!]]"@@<</if>>\
+@@.act; "mi wile e [[telo seli]]."@@<</if>>
+@@.act; "mi wile [[toki taso]]."@@
+@@.act; "[[mi tawa!|tomo pi telo nasa]]" @@
+
+
+:: lupa
+<<set $ev to ["tenpo lili li tawa.", "kalama musi li ante.", "sina kute e jan esun. ona li toki musi.", "kon pi palisa seli li utala e oko sina.", "tenpo li tawa.", "sina awen lili. taso lupa li open ala.", "kalama ala li kama tan tomo telo"]>>\
+<span id="awenlupa">sina lukin open e lupa pi tomo telo. taso ona li pini li tawa ala.</span>
+
+@@.act; sina [[utala luka e lupa]] li toki kalama.@@
+@@.act; sina <<link "awen.">><<replace "#awenlupa" t8n>><<= $ev.random()>><</replace>><</link>>@@
+<<if $joeilomoku eq 1>>@@.act; sina lukin [[open e lupa kepeken ilo moku]] sina.@@<</if>>
+@@.act; sina [[tawa|tomo pi telo nasa]].@@
+
+
+:: meli
+meli ni li pona lukin mute. ona li moku kon e palisa seli li lukin e sewi. ona li tawa sike lili e telo nasa lon luka ona. sina la ona li musi ala.
+
+@@.act;sina [[tawa meli]].@@
+@@.act;sina [[lukin e tomo|tomo pi telo nasa][$olinmeli += 1]].@@
+
+
+:: tawa meli
+meli li lukin e sina. tenpo ni la uta ona li moli lukin. taso oko ona li musi lukin. ona li awen e toki sina.
+
+<<if $maniala eq 0 and ! hasVisited("telo ante tawa sina")>>@@.act;"mi esun e [[telo ante tawa sina]] anu seme?"@@<</if>>
+<<if $melisona eq 1>>\
+<<if $joetelowawa>>\
+@@.act;"[[mi jo e telo wawa]]."@@
+<<else>>@@.act;"[[mi ken ala kama jo e telo wawa]]."@@
+<</if>>\
+<<else>>\
+<<if ! hasVisited("supa lape mi li ike")>>@@.act;"[[supa lape mi li ike]]."@@<</if>>
+<<if ! hasVisited("sina kama lon tomo mi")>>@@.act;"mi wile e ni: [[sina kama lon tomo mi]]."@@<</if>>
+@@.act;"sina [[jan utala]] anu seme?"@@<<if hasVisited("meli nasa") and ! hasVisited("alasa e mije")>>
+@@.act;"sina alasa ala [[alasa e mije]]?"@@<</if>>
+<<if ! hasVisited("pakala mi li kama") and $wawa lte 1>>@@.act;"mi pilin e ni: [[pakala mi li kama]]."@@<</if>>
+<<if hasVisited("lupa") and ! hasVisited("sina tawa tomo telo.")>>\
+@@.act;"mi wile [[tawa tomo telo|t-tomo telo]]."@@<</if>>
+<</if>>
+
+
+:: supa lape mi li ike
+meli li lukin nasa e sina. ken la ona li pilin e ni: sina jan pi nasa ike.
+
+meli: "o awen weka! mi jo e ilo pi kon utala lon poki mi."
+
+poki lili ona li lon noka ona.
+
+sina: "mi jan pona. mi nasa ala. supa lape mi li nasa."
+
+meli: "supa sina li nasa tan seme?"
+
+
+@@.act;"ona [[li tawa wawa li kalama]]."@@
+@@.act; "kon ike anu akesi suli li [[lon anpa supa]]."@@
+
+
+:: sina kama lon tomo mi
+sina: "mi wile e ni: sina kama lon tomo mi."
+
+meli li loje lili. taso uta ona li tawa sewi.
+
+meli: "nanpa wan la mi wile toki. [[sina toki pona la mi ken kama|tawa meli]]."
+
+
+:: telo ante tawa sina
+uta meli li tawa sewi. <<set $olinmeli += 1>>
+
+meli: "pona. mi wile e poki lili kin."
+
+pona. meli li pona lukin mute. pilin pona o kama!
+
+sina tawa [[jan esun]].
+
+
+:: jan utala
+jan esun li telo e supa la ona li pakala e poki li toki jaki kalama.
+
+meli en sina li lukin e mije lon tenpo lili.
+
+meli: "sina pilin ala pilin e ni: meli li ken utala?"
+
+@@.act; "[[meli ken utala]]."@@
+@@.act; "meli ken utala lili. [[taso mije ken utala suli]]."@@
+
+
+:: alasa e mije
+sina: "sina alasa ala alasa e mije?"
+
+meli: "seme li toki e ni tawa sina? mi la ni li jan esun."
+
+ona li kon kalama. tenpo ni la ona li jo e sinpin pi wile lape.
+
+meli: "mi alasa ala e mije. taso mi alasa e kon ike."
+
+sina: "mi wile e jan alasa. akesi ike suli li lon anpa pi lape supa mi."
+
+ona: "pona. mi wile pali. taso mi wile e ni: sina sona e mi lon. mi meli pona. mi alasa e akesi taso. mije li pona tawa mi. jan esun li jan pi nasa lili. ona li pona. taso mi pona ala tawa ona."
+
+sina: "[[tan seme]]?"
+
+
+:: t-tomo telo
+<<set $wawa -= 1>>meli li sewi e luka ona. luka li lawa e nasin lupa.
+
+meli: "tomo telo li lon ni. lupa li open pona ala."
+
+[[ona li moku lili e telo ona li lukin e nasin ante|tomo pi telo nasa]].
+
+
+:: pakala mi li kama
+meli li lukin e sina.
+
+ona: "pakala sina?"
+
+lawa sina li tawa anpa li tawa sewi.
+
+sina: "mi sona ala e nasin pi pona mi. mi pilin e ni: moli li kama."
+
+ona: "ken la sina wile tawa tomo pi sijelo pona." <<set $wawa -= 10>> <<set $olinmeli -= 9>>
+sina: "sina sona ala. sijelo mi li pona. taso [[supa lape mi li ike]]."
+
+
+:: li tawa wawa li kalama
+sina: "ona li tawa wawa li kalama."
+
+uta meli li tawa sewi.
+
+meli: "pona! tenpo mute la supa lape mi li tawa li kalama tan ni: mi unpa mute!"
+<<set $olinmeli += 1>>
+@@.act; [[sina loje|kama lete]].@@
+@@.act; [[uta sina li tawa sewi kin|uta mi li tawa sewi kin]].@@
+
+
+:: lon anpa supa
+<<set $melisona to 1>>
+meli li wawa e oko sina li toki ala. lon la ona li pali sona lon insa lawa ona. ken la ona li kama pilin e ni: sina nasa ala.
+
+tenpo li tawa. ilo musi li pana e kalama musi.
+
+meli: "ma ni la akesi suli li lon ala."
+
+sina: "taso kon ike li lon?"
+
+lawa ona li tawa anpa li tawa sewi.
+
+meli: "sina wile utala e kon la mi wile e telo wawa pi jaki ala."
+
+<<if $joetelowawa eq 1>>sina pana e poki pi telo wawa tawa meli. tenpo lili la meli li tawa ala. ken la ona li pilin e ni: "mije ni li kama jo e telo wawa tan seme?"
+
+meli: "pona a. [[mi tu o tawa!]]"
+<<else>>
+telo wawa li moku e jaki. sina sona ala e ni: ona li utala e kon ike. a! tenpo pini lili la sina sona ala e ni: kon ike li lon!
+
+@@.act; [[sina tawa|tomo pi telo nasa]]. @@
+<</if>>
+
+
+:: uta mi li tawa sewi kin
+uta sina li tawa sewi kin. meli li pona lukin mute. lon ni la kon li kama seli anu seme?
+
+sina sona ala e ijo pi anpa supa. taso sina sona e ken pi sewi supa. 
+
+unpa. unpa li pona suli.
+
+
+<<if ! hasVisited("pakala mi li kama")>>\
+@@.act; "ken la mi tu li [[tawa tomo sina]] li moku lili e telo seli li toki."@@<</if>>
+@@.act; "sina wile ala wile [[unpa e mi]]?"@@
+@@.act; (ni li tenpo unpa ala.) "sina unpa. pona. taso [[sina utala ala utala?|jan utala]]"@@
+
+
+:: mi tu o tawa!
+toki ala la meli en sina li tawa.
+<<set $location to "tomo">>
+sinpin pi tomo sina la meli li lukin e nasin ale.
+
+sina: "sina wile ala wile e kulupu utala suli?"
+
+meli: "ala. mi wile ala e jan ante. mi wawa."
+
+tomo sina li kalama ala.
+
+sina luka e nasin: "tomo lape mi li lon nasin ni."
+
+ale li pimeja.
+
+@@.act; sina [[open e suno]].@@
+@@.act; "[[sina wile la]] mi open e suno."@@
+@@.act; sina tawa tomo lape [[lon pimeja]].@@
+
+
+:: mi jo e telo wawa
+sina: mi jo e telo wawa.
+
+meli li tawa sewi.
+
+meli: pona. [[mi tu o tawa!]]
+
+
+:: tawa tomo sina
+<<if $olinmeli gt 1>>meli: "tomo mi li jaki. sina wile la mi ken tawa tomo sina."
+
+ni li tenpo olin anu seme? ken la sina tu li kama pilin pona.
+
+tenpo kama lili la supa lape sina li kalama tan sina tu.
+
+pakala! supa lape sina li ike la sina ken ala unpa.
+
+@@.act; kon ike li lili. taso [[olin li suli]].@@
+@@.act; sina ken ala. supa lape sina li ike. "kon ike anu akesi suli li [[lon anpa supa]] mi".@@
+<<else>>\
+meli: "ala. mi wile awen lon ni."
+
+sina pilin e ni: sina pali ante la meli li tawa tomo sina. ike a!
+
+[[sina kon suli|tawa meli]].
+<</if>>
+
+
+:: unpa e mi
+telo uta sina li tawa anpa lon selo.
+
+sina pilin pona mute tan ni: tenpo kama lili la sina unpa. sitelen pi selo meli suwi li lon lawa sina.
+
+oko meli li seli wawa. lon la ona li wile unpa.
+
+sina toki e ijo. taso sina kute ala. ni li tenpo kute ala. ni li tenpo unpa.
+
+<<set $olinmeli -= 4>>\
+@@.act;ken la meli li wile ala. sina [[kama lete]].@@
+@@.act; unpa tenpo! sina [[lukin pilin e nena sike]] pi jan unpa sina.@@
+
+
+:: kama lete
+sina loje. ni li tenpo olin la. ijo suli li awen. akesi li awen lon tomo sina. 
+
+sina wile jan olin la sina wile alasa e ike pi supa lape sina.
+
+sina moku e kon suli.
+
+@@.act;[[tawa noka|tawa weka]] li pona e sina.@@
+@@.act; sina [[esun e telo nasa|jan esun]].@@
+@@.act; sina wile [[tawa telo tomo|lupa]].@@
+
+
+:: lukin pilin e nena sike
+luka sina li kama lon poki pi nena sike la meli li pana e kon utala tawa sinpin sina.
+
+oko sina li seli wawa.
+
+sina kon insa ike. sina anpa li sike pi tawa ala. meli li utala e sina. ona li wawa suli. jan ante li kama. 
+
+meli: "ona li lukin utala unpa e mi!"
+
+noka mute li utala e sina. sina ken ala tawa.
+
+jan li luka e sina li tawa e sina. noka ona li kalama ala. jan li pana e kon mije. ni li meli ala. ona li jan esun anu jan ante? sina sona ala. sina pilin e kon lete ma.
+
+kalama sike li kama suli. jan li toki e sina tawa [[jan pi wawa lawa]].
+
+
+:: olin li suli
+ken la kon ike li weka. 
+
+sina: "mi o tawa!".
+
+meli li moku wawa e telo ona li tawa sewi. sina lawa ona lon tomo sina.
+
+tomo sina li kalama ala. sina open e suno. mu ala. sina tu li kama lon lape sina. mu ala kin. <<set $location to "tomo lape">>
+
+sina lukin lili e anpa pi supa lape. ale li pona.
+
+meli li uta e sina. sina luka e ona. luka sina li tawa lon anpa len. [[selo meli li suwi li seli]].
+
+
+:: telo nasa wawa
+jan esun li anpa. tenpo kama lili la ona li kama. ona li jo e poki pi telo walo.
+
+jan esun li pana e poki tawa sina.
+
+ona: "ni li telo nasa pi nanpa wan. pona mute pakala."
+
+oko ona li nasa.
+
+ona: "o moku! tenpo ala la sina sona e sama."
+
+@@.act; sina [[moku]].@@
+@@.act; sina: "sina [[moku kin]] anu seme?"@@
+
+
+:: telo nasa kili
+sina: "mi wile e telo nasa kili."
+jan esun: "pakala! mi pana e telo kili tawa [[meli nasa]]. taso mi jo ala e telo kili ante."
+
+ona li lukin lon anpa supa.
+
+ona: "ala. telo kili ala. mi pana ala pana e telo nasa?"
+
+@@.act;  [[pona|telo nasa wawa]].@@
+@@.act;  <<link [[ala|jan esun]].>><<set $telokiliala to 1>><</link>>@@
+
+
+:: telo kili
+jan esun li lukin e sina. linja oko ona li anpa.
+
+jan esun: "telo kili? sina jan lili ala… sina pilin ike anu seme? mije suli li moku e telo nasa."
+
+
+@@.act; "pona. mi wile e [[telo nasa|telo nasa wawa]]."@@
+@@.act; "sina jo e telo kili la [[mi wile e telo kili a]]!"@@
+
+
+:: telo seli
+uta pi jan esun li anpa.
+
+jan esun: "ilo pi telo seli li pakala. mi ken ala pali e ona. mi pana ala pana e telo nasa tawa sina?"
+
+@@.act; "[[pona|telo nasa wawa]]."@@
+<<if $telokiliala eq 0>>@@.act; "ala! o pana e [[telo kili]]."@@
+<<else>>@@.act; "ni li nasa. [[mi wile ala e telo nasa sina|tomo pi telo nasa][$wawa +=1]]."@@<</if>>
+
+
+:: toki taso
+<<if $tokitaso is 1>>
+jan esun li telo e supa li awen e toki sina.
+<<else>>sina open e toki: "tenpo pimeja ni la esun sina li jo ala e jan mute."
+
+jan esun li lukin e tomo.
+
+ona: "tenpo mute la jan mute li kama."
+<<set $tokitaso to 1>>
+<</if>>
+<<if hasVisited("lupa")>>@@.act; "tomo telo li [[pakala tan seme]]?"@@<</if>>
+@@.act; "[[meli ni li seme|meli nasa]]?"@@
+@@.act; "[[supa lape mi li ike|supa lape / esun]]."@@
+@@.act; "sina wile ala wile utala e [[akesi suli lon tomo mi]]?"@@
+@@.act; sina jo ala e toki. [[sina tawa|tomo pi telo nasa]].@@
+
+
+:: telo wawa!
+jan esun: "sina wile kama moli anu seme? telo wawa li moku ala. mi esun ala e ona."
+
+uta sina li tawa sewi.
+
+sina: "mi moku ala e telo wawa."
+
+@@.act; "[[meli li toki e ni]]: telo wawa li utala e kon ike."@@
+@@.act; "sina pana e telo wawa la mi pana e [[mani mute]]."@@
+
+
+:: utala luka e lupa
+sina utala luka e lupa. taso lupa li tawa ala. sina toki kalama wawa. taso jan ala li toki lon tomo telo.
+
+sina lukin e tomo suli. [[jan ala li lukin e sina|lupa]].
+
+
+:: StoryInit
+<<set $maniala to 0>>
+<<set $telokiliala to 0>>
+<<set $joeilomoku to 0>>
+<<set $nasanimi to ["nasa", "sike", "wawa", "mute", "anpa", "poka", "pakala", "ike", "pona"]>>
+<<set $wawa to 1>>
+<<set $olinmeli to 1>>
+<<set $tokimusinanpa to 0>>
+<<set $nanpa to ".">>
+<<set $nasin to ".">>
+
+
+:: open e lupa kepeken ilo moku
+sina lukin e tomo. jan ala li lukin e sina.
+
+sina tawa e ilo moku lon lupa lupa. pali sina la lupa li kama open.
+
+pona!
+
+[[sina tawa tomo telo.]]
+
+
+:: sina tawa tomo telo.
+<<set $location to "tomo telo">>
+tomo telo li lon pimeja. luka sina li lukin luka e nena suno. tenpo lili la suno li kama lon li kalama.
+
+tomo li jaki mute. sina lukin e poki telo. ona li jaki kin. ale li jaki.
+
+poki pi telo wawa li lon supa sinpin. sina luka e ona. taso sina telo ala e tomo jaki. <<if $melisona eq 1>> meli li sona e nasin utala pi telo wawa. <<else>> ken la telo wawa li pona lon tenpo kama. <</if>>
+<<set $joetelowawa to 1>>
+sina [[tawa|tomo pi telo nasa]].
+
+
+:: meli li toki e ni
+jan esun: "kon ike? toki ni li seme? mi sona e ni: meli pakala ni li nasa".
+
+kalama musi li kama moli.
+
+sina: "ona li [[nasa seme|meli nasa]]?"
+
+
+:: mani mute
+jan esun: "mani mute? pona! mi pilin e ni: mi jo e telo wawa lon tomo telo."
+
+jan esun li open e luka ona. "o pana e mani!"
+
+sina lukin lon poki sina. ala. sina luka e len sina. mani ala. sina sona. mani sina li lon tomo lape sina!
+
+sina: "pakala! mani mi li lon tomo mi."
+
+jan esun: "mani ala la telo wawa ala."
+
+[[sina tawa|tomo pi telo nasa]]
+
+
+:: mi wile e telo kili a
+sina toki wawa la jan esun li tawa monsi.
+
+jan esun: "pakala! mi pana e telo kili pakala."
+
+ona li open li pana e poki suli pi telo kili.
+
+jan esun: "nanpa mani li ni."
+
+sina lukin e nanpa mani. pona. ona li lili.
+
+sina lukin lon len sina. mani ala. pakala kin! mani sina li lon tomo lape sina…
+
+sina: "mani mi li awen lon tomo mi."
+
+jan esun: "pakala en PAKALA! o tawa weka!"
+<<set $maniala to 1, $wawa += 2>>
+sina awen la ona li utala e sina. 
+
+@@.act; [[sina tawa|tomo pi telo nasa]]@@
+
+
+:: meli nasa
+jan esun: "ona li jan sona ala. ona li nasa pakala. meli li toki e ni: ona li alasa e akesi e mije. ona li utala e jan akesi. taso mi pilin e ni: ona li utala ala e akesi meli. nasa pakala!"
+
+sina: "jan akesi li seme?"
+
+ona: "jan akesi li mute. jan moli pi moli ala, jan pi kiwen uta suli li moku e telo loje sina, mun sike la jan li kama soweli, jan pi sijelo akesi, jan ante pi mun ma…"
+
+sina: "… kon ike kin ala kin?"
+
+ona li tawa anpa li tawa sewi e lawa ona.
+
+jan esun: "kon ike li lon la meli nasa ni li utala e ona. o toki ala tawa ona. sina akesi tawa ona la ona li utala e sina. sina mije pona la meli nasa li wile unpa e sina."
+
+@@.act; "mi [[mije pona]]."@@
+@@.act; jan esun li nasa. [[sina tawa|tomo pi telo nasa]].@@
+
+
+:: moku
+tenpo pi moku pini sina la tomo li tawa <<nasa "mute" 400>>.
+
+sina: "telo ni li <<nasa "wawa" 400>> mute a!"
+
+sina kama <<nasa "nasa" 350>> lili.
+
+nimi li kama nasa. sina pilin <<nasa "ike" 350>> la sina luka e supa esun.
+
+jan esun: "ale li <<nasa "pona" 350>> [[anu seme?|moku2]]"
+
+
+:: moku kin
+jan esun: "a a a! pona. mi moku kin la sina esun e moku mi." <<set $wawa -= 1>>
+
+tenpo pi lili mute la ona li luka e poki li moku ale.
+
+sina [[moku]] sama.
+
+
+:: widget defs [widget nobr]
+<<widget "nasa">><<print "<span id='nasa-" + $args[0] + "'>" + $args[0] + "</span>" >>
+<<repeat `$args[1]+"ms"`>>
+<<replace `"#nasa-" + $args[0]`>>\
+<<if random(100) lte 40>><<=$nasanimi.random()>><<else>><<=$args[0]>><</if>><</replace>>
+<</repeat>>
+<</widget>>
+
+
+:: moku2
+pilin <<nasa "nasa" 300>> sina li kama suli. sina wile pana jaki.
+
+jan esun: "sina pana jaki la o tawa ma! tomo telo li <<nasa "pakala" 300>>. telo mi li <<nasa "ike" 300>> tawa sina la o awen e mani sina."
+
+sina: "pona. ale li <<nasa "pona" 300>>".
+
+toki ni la sina [[tawa ma]].
+
+
+:: tawa ma
+<<set $location to "sinpin pi tomo sina">>\
+kon lete li pona lili e lawa sina. ma tomo li tawa <<nasa "sike" 600>> kin.
+
+sina pana jaki lon nasin pi tomo tawa. <<set $olinmeli -= 1>> <<set $wawa -= 1>>
+
+tenpo ni la pilin <<nasa "ike" 900>> sina li weka lili.
+
+uta poki sina li jaki. sina luka e lipu len lon poki sina.
+
+pakala! sina lukin e ni: sina jo e mani ala!
+<<set $maniala to 1>>
+[[sina kon wawa|tawa weka]].
+
+
+:: pakala tan seme
+jan esun: "tomo telo li pakala tan ni: jan nasa pakala li jaki li pakala. jan li moku mute e telo nasa la ona li kama ike. sina wawa ala la o moku ala e telo nasa."
+
+<<if hasVisited("tawa ma")>>tenpo lili la ona li toki ala.
+
+ona: "lon la mi toki e sina kin."
+<</if>>
+sina wile [[ante e ijo toki|toki taso]].
+
+
+:: supa lape / esun
+jan esun li lukin nasa e sina.
+
+ona: "o ante e supa. jan sama mi li jo e esun pi ijo tomo li jo e supa lape mute."
+
+sina: "ala. supa lape mi li jo e akesi anu kon ike."
+
+jan esun li kon kalama.
+
+ona: "ken la sina wile moku ala e telo nasa. pakala! kon ike li lon ala."
+
+@@.act;"kon ike li lon la jan li [[utala seme]] e ona?"@@
+@@.act;"[[sina lon|toki taso]]@@
+
+
+:: akesi suli lon tomo mi
+jan esun li telo e poki li lukin e sina.
+
+ona: "ma ni la akesi suli li lon ala. akesi sina li soweli suli lili. tenpo lili la soweli li kama lon tomo mi."
+
+sina: "akesi mi li mu wawa. mi pilin e ni: ona li moku e mi."
+
+jan esun: "a a a! soweli tan ma ni li moku lili taso e jan. sina wile ala wile e ni: jan pi wawa lawa li kama lon tomo sina li utala e soweli lili?"
+
+@@.act; "ala. mi wile e [[nasin ante|toki taso]]."@@
+@@.act; "lon. [[mi wile]]."@@
+
+
+:: mije pona
+jan esun: "unpa li pini la pipi mute en akesi mute li moku e jan unpa ona."
+
+sina: "meli ni li pipi ala."
+
+ona: "ken la ona li akesi kin. tenpo mute la ona li toki tawa mije sin. tenpo ala la mije li kama sin."
+
+sina: "mi [[lukin wawa|tomo pi telo nasa]]."
+
+
+:: jan pi wawa lawa
+tomo tawa li kama. kalama sike li moli. oko sina li pakala kin. taso sina lukin lili e suno. suno laso li sike wawa. kalama noka li kama.
+
+jan pi wawa lawa: "toki. jan ni li utala unpa e meli anu seme?"
+
+jan ante: "lon. mi lukin e ale."
+
+jan pi wawa lawa li anpa li luka e sijelo sina.
+
+ona: "jan o… sina ken ala ken tawa?"
+
+sina: "mi pilin pakala. taso mi pilin e ni: mi ken tawa lili."
+
+jan pi wawa lawa li sewi e sina. ona li lawa e sina tawa [[tomo tawa ona]].
+
+
+:: tomo tawa ona [end]
+<<set $location to "tomo tawa">>\
+sina kama lon tomo tawa. oko sina li pakala kin. jan li linja e luka sina lon monsi sina.
+
+jan pi wawa lawa: "utala unpa li ike mute. sina utala kin e meli la jan lawa li pana e sina lon tomo pi tawa ala."
+
+sina: "sina lon poki pi tomo mi la sina ken ala ken tawa tomo mi?"
+
+ona: "mi tawa tan seme?"
+
+sina: "mi lon tomo pi tawa ala la mi wile e ni: lupa pi tomo mi li pini. ni la jan ike li ken ala kama insa."
+
+jan pi wawa lawa li kon kalama.
+
+ona: "pona. ilo sina pi lupa open li lon len sina anu seme?"
+
+sina: "ala."
+
+uta sina li tawa sewi ike mute. kon ike pi supa lape sina li wile moku ala moku e jan ni?
+
+sina: <<linkreplace "\"ona li lon poki pi supa lape mi.\"" t8n>>"ona li lon poki pi supa lape mi."
+
+supa lape sina li ike lili. taso sina ike suli.
+<<set $pini to 4>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: utala seme
+jan esun li palisa luka tawa meli.
+
+ona: "[[meli nasa]] li toki e ni: ona li utala e kon ike."
+
+sina: "pona. [[mi tawa|tomo pi telo nasa]]."
+
+
+:: mi wile
+jan esun: "sina jo e ilo toki anu seme?"
+
+sina lukin lon len sina. ilo toki sina li awen lon tomo lape sina.
+
+jan esun: "sina wile la sina kepeken e ilo toki mi."
+
+sina pali ni li awen.
+
+tenpo kama lili la jan pi wawa lawa li kama. sina mute li toki li tawa tomo sina.
+
+<<set $location to "tomo lape", $wawa -= 5, $olinmeli -= 1 >>\
+tomo sina li nasa ala. ale li pona.
+
+jan pi wawa lawa: "mi lukin ala e soweli. ken la ona li tawa." ona li lukin e lupa pini. "ken la soweli li lon ala. sina wile lape mute."
+
+[[jan li tawa]].
+
+
+:: jan li tawa [end]
+sina telo e kiwen uta sina li tawa supa lape. supa sina li kalama ala li tawa ala. ken la kon ike li kama lon tenpo kama. ken ante la sina nasa lili.
+
+lape li kama ala. tenpo ale la sina lukin kute e kalama akesi.
+
+suno li kama la sina lape ala kin.
+
+tenpo ni la sina sona e ni: pakala sina li kama.
+
+ken la akesi li lon anpa a pi supa lape sina. ken la akesi li lon insa lawa taso. nasin ale la ona li moku e lawa sina. 
+
+sina jo ala e wawa.
+
+sina awen. tenpo kama la ijo li kama. 
+
+<<linkreplace "akesi anu nasa anu moli." >>akesi anu nasa anu moli.
+<<set $pini to 2>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: open e suno
+sina open e suno la meli li lukin e sina.
+
+sina: "seme? pimeja la mi ken ala lukin."
+<<if $wawa lt 1>>
+meli: "a a a. sina awen lon poka pi mi la ale li pona."
+
+sinpin lawa sina li seli a. ona li toki e ni, taso ona li kute ala e mu ike.
+<<else>>
+meli: "pona. suno la mi lukin e nasin li pakala ala e ijo sina."
+<</if>>
+
+sina: "tenpo ni la mi tu li [[pali e seme?]]"
+
+
+:: sina wile la
+meli li lukin e sina.
+
+ona: "jan lili taso li pilin e ni: suno li weka e kon ike."
+
+<<if $wawa gt 2>>\
+sina: "sina wile tawa pimeja la o tawa ala e ijo mi."
+
+ona: "oko mi li wawa. en la tomo sina li [[jo ala e ijo mute|lon pimeja]]."
+<<else>>sinpin lawa sina [[li seli|open e suno]].<</if>>
+
+
+:: lon pimeja
+meli li open e poki pi telo wawa li tawa lon poka pi supa lape.
+<<set $location to "tomo lape", $wawa += 1>>
+ona: "o kama!"
+
+sina tawa lon poka ona li awen. ala li tawa li kalama.
+
+sina: "akesi li tawa weka."
+
+ona li anpa li tawa lon anpa pi supa lape. sina tawa kin.
+
+meli: "mi pilin e lon ona. mi awen e ona."
+
+[[sina tu li awen]].
+
+
+:: sina tu li awen
+<<set $location to "tomo lape">>\
+<<if $olinmeli gt 3>>\
+pilin pi sijelo meli seli lon poka sina li nasa e sina. sina wile uta e meli. taso sina wawa.
+
+tenpo lili la pimeja ike li kama. kalama lili lili la pimeja ike li tawa sina tu.
+  <<if $wawa gt 2>>\
+kon ike li lon poka lili la meli li pana wawa e telo wawa tawa pimeja ike.
+
+meli: "ike o moli!"
+
+kon ike li tawa ala. sina lukin suli e ona. ona li akesi ala. ona li jo ala e sijelo. ni li kon ike a. oko ike tu li utala e sina. uta suli suli li open. [[kiwen uta mute li pana e telo moli|pini pona]].
+  <<else>>\
+luka sina li tawa luka meli. meli li lukin e sina. uta ona li tawa sewi.
+
+meli li lukin ala e pimeja ike kama. 
+
+sina toki kalama wawa. sona nimi li weka tan sina.
+
+sina: "aaaaa!"
+
+meli li sike li pana wawa e telo wawa tawa kon ike.
+
+pimeja: "MU!"
+
+uta ike suli li moku utala e noka meli.
+
+wawa la [[meli li utala kin]].
+<</if>>
+<<else>>
+<<if $olinmeli lt 1 >>
+selo pi sina tu li kulupu la meli li weka lili tan sina.
+
+pimeja ike li kama lon tenpo lili.
+
+meli li pana wawa e telo wawa tawa kon ike.
+
+kon ike: "MU! jan nasa o ni li wawa ala."
+
+meli: "ike o toki ala. mi sona e nasin pi moli sina."
+
+pimeja li tawa wawa poka li moku utala e noka sina.
+  <<if $wawa lt 1>>
+sina: "a mi kama moli!"
+
+[[wawa la meli li utala|meli li utala]].
+  <<else>>
+sina: "a! kon ike li moku pakala e mi."
+
+meli: "o wawa."
+
+[[wawa ona la meli li utala|utala ike]].
+  <</if>>
+<<else>>
+sina awen lon tenpo suli. taso kon ike li kama ala.
+
+pilin pi poka meli li pona tawa sina. taso anpa li ike tawa monsi sina. sina sona e weka pi kon ike la sina ken awen lon tomo pi telo nasa li toki olin tawa meli. anu sina ken kama tomo li lape.
+
+suno li kama la meli li tawa tan anpa supa.
+
+meli: "nasa… mi pilin e kon ike. taso ona li tawa. tenpo ala la ona li utala ala. ken la ona li pilin e ni: mi mute li wawa suli."
+
+sina: "sina wile ala wile e ni: mi pali e telo seli li pana e ona tawa sina?"
+
+[[meli li sewi e luka ona.]] 
+<</if>><</if>>
+
+
+:: tan seme
+<<set $olinmeli += 1>>meli: "ken la ona li olin kin e mi. tenpo pini la ona li jan olin mi."
+
+jan esun en meli ni? sina ken ala sitelen lawa e kulupu ona. jan esun li mije lili. taso meli li suli. a. olin li lukin ala.
+
+sina: "jan olin pini li lon la sina kama tan seme?"
+
+uta meli li tawa sewi.
+
+ona: "tomo ni li pona. jan mute li jo e kon ike lon tomo ona. jan ni li kama. mi pona ona."
+
+sina: "ni la o pona mi. [[akesi suli anu kon ike li lon anpa pi supa lape mi|lon anpa supa]]."
+
+
+:: pali e seme?
+meli: "mi tu li tawa anpa supa li awen e kon ike. sina lukin ala lukin e nasin ante?"
+<<set $wawa -= 1>>
+@@.act; "pona. mi [[pali lon nasin ni|sina tu li awen]]."@@
+@@.act; [[sina toki e toki musi.]] @@
+@@.act; [["ken la mi tu o uta."]] @@
+
+
+:: selo meli li suwi li seli [end]
+meli li weka e len sina. sina weka e len ona. sina tu li anpa lon supa. kon seli meli li tawa wawa. selo pi sina tu li wan la sina pilin ala e ijo ante. pilin pona la oko sina li pini.
+
+sina kute ala e mu lili. anu sina pilin e ni: meli li mu unpa.
+
+pimeja lete li kama lon supa kin. pimeja li moku wawa e meli ale. luka sina li pilin ala e monsi meli li pilin ala e selo suwi li pilin taso e lete jaki. ale li pona ala.
+
+uta pimeja li open wawa. kon ike li wile moku kin. <<linkreplace "ona li moli moku e sina." t8n>>ona li moli moku e sina.
+<<set $pini to 3>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: mi ken ala kama jo e telo wawa
+<<set $wawa -= 2, $olinmeli -= 2>>uta meli li tawa anpa.
+
+meli: "sina wawa ala anu sona ala. sina kama jo e telo wawa la mi pilin pona. tenpo ni la mi wile tawa jan esun. ona li pana e telo wawa tawa mi. taso mi pilin ike tan toki ona."
+
+ona li tawa li toki tawa jan esun. mije li toki jaki mute. taso ni tu li toki utala ala. jan esun li open e lupa li pana e telo wawa.
+
+meli li kama.
+
+ona: "[[mi tu o tawa!]]"
+
+
+:: meli ken utala
+<<set $olinmeli += 1>>lawa meli li tawa anpa li tawa sewi.
+
+meli: "mi wawa."
+
+sina: "pona. mi wile e jan wawa tan ni: [[akesi ike suli li lon anpa pi supa lape mi|lon anpa supa]]."
+
+
+:: taso mije ken utala suli
+<<set $wawa += 1>>sina: "mije li wawa. taso mije li sona ala. meli li sona mute. lawa ona li pona."
+
+meli: "tenpo mute la lawa mi li ike. taso mi wawa. mi utala. pali mi li wile e wawa mute. sina alasa e kon ike la sina wile wawa."
+
+sina: "mi wile alasa e kon ike. ni anu akesi ike suli li [[lon anpa pi supa lape mi|lon anpa supa]]."
+
+
+:: sina toki e toki musi.
+<<set $tokimusinanpa += 1>><<if $tokimusinanpa gt 3>>\
+meli: "jan nasa o weka e toki sina. ni li tenpo alasa."
+
+ona li open e poki pi telo wawa li tawa anpa pi supa lape sina.
+
+@@.act; [[sina tawa kin|sina tu li awen]]@@<</if>>
+<<if $olinmeli gt 1>><<set $tokimusi to 33>><<else>><<set $tokimusi to 66>><</if>>
+<<if random(100) lt $tokimusi>>uta meli li tawa ala. oko meli li moli lukin. lon la sina musi ala e ona. <<set $olinmeli -= random(4)>>
+
+meli: "sina nasa anu seme? kon ike a li lon tomo sina. ni li tenpo musi ala." 
+<<else>>meli: "a a a. tenpo sina li nasa. taso toki musi sina li pona. tenpo ni la mi tu o tawa anu seme?" <<set $olinmeli += random(4)>>
+<</if>>
+@@.act; [[sina toki e toki musi ante|sina toki e toki musi.]]@@
+@@.act; [["ken la mi tu o uta."]] @@
+@@.act; ni li tenpo utala. [["mi tu o tawa!"|sina tu li awen]] @@
+
+
+:: "ken la mi tu o uta."
+<<if $olinmeli gt 1 and $olinmeli lt 5 >>meli li luka e sijelo sina li uta lili e uta sina.
+
+uta ona li seli li suwi.
+
+meli: "tenpo ni la sina pilin pona anu seme?"
+
+tenpo ni li lili ike.
+
+meli li tawa anpa pi supa lape sina la sina ken ala awen e ona.
+
+<<else>><<if $olinmeli gte 5>>
+kalama ala la meli li luka wawa e sijelo sina li uta wawa e uta sina. luka ona li tawa anpa pi len sina.
+
+luka sina li tawa anpa pi len ona kin. selo meli li seli li suwi.
+
+tenpo li weka.
+
+sina lukin weka e len meli. taso ona li weka e luka sina.
+
+meli: "jan nasa suwi o tawa ala. kon ike li lon poka. ona li moli la mi ken pali sin kin."
+
+meli li pona e len ona li tawa anpa pi supa lape sina.
+<<else>>
+meli li utala luka e sinpin sina.
+
+ike a! selo sina li seli wawa.
+
+meli: "sina nasa a! sina pilin e seme? sina pali sin la mi tawa weka."
+
+ona li tawa anpa pi supa lape sina. oko meli li utala e sina.
+
+<</if>><</if>>
+@@.act; [[sina kon wawa li tawa kin.|sina tu li awen]]@@
+
+:: pini pona [end]
+wawa la meli li utala luka e oko ike. kepeken luka ante la meli li pana e telo wawa lon uta ike.
+
+kon ike li toki kalama wawa li moli weka.
+
+tenpo lili la ike li lon ala.
+
+ale li pona. luka pi sina tu li kulupu. ale li pona a.
+
+meli: "tenpo utala li pini la mi wile e awen lon poka sina. ken la sina pana e telo tawa mi…"
+
+sina tawa sewi li tawa tomo moku. 
+
+sina open e supa lete li kama jo e telo kili. ken la meli li tawa lon tenpo ala.
+
+<<linkreplace "ale li pona kin. " t8n>>ale li pona kin. 
+<<set $pini to 6>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: meli li utala kin [end]
+noka meli li pana e telo loje mute. taso meli li utala wawa. ona li utala kepeken luka ona li pana wawa e telo wawa tawa uta ike suli.
+
+kon ike li toki kalama li kama moli. sijelo ike li weka. tenpo lili la ijo ike li awen ala.
+
+meli en sina li tawa tan anpa supa.
+
+sina lukin e noka pakala. 
+
+sina: "sina pilin seme?"
+
+meli: "mi wile e ni: sina pona mi."
+
+sina tawa tomo telo li kama jo e len e telo pona. tenpo pi kama sin la meli li lon supa sina li jo ala e len ona li lukin e noka ona.
+
+sina telo e pakala ona la meli li kama jo e luka sina.
+
+ale li pona. tenpo pini la supa lape sina li ike mute. <<linkreplace "tenpo ni la ale li pona a." t8n>>tenpo ni la ale li pona a.
+<<set $pini to 7>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: meli li utala [end]
+meli li utala luka e oko ike li pana wawa e telo wawa tawa uta ike kepeken luka ante. meli li wawa a.
+
+kon ike li toki kalama li kama moli li weka walo.
+
+meli li tawa tan anpa supa.
+
+meli: "sina jo e len e telo pona lon seme?"
+
+ona li tawa ala anu seme?
+
+sina: "lon tomo telo."
+
+meli li tawa li kama sin li pona sina.
+
+ale li pona ala pona? sina pilin ike. sina pilin e ni: sina pali ante la ale li ken pona mute.
+
+meli: "noka sina li jaki ala li jo e len la mi tawa."
+
+sina toki ala. meli ni li wawa li pona lukin li sona mute. sina pona ala tawa ona. ike a.
+
+lon la kon ike li moli. <<linkreplace "taso supa lape sina li ike kin lon tenpo ni." t8n>>taso supa lape sina li ike kin lon tenpo ni.
+<<set $pini to 8>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: utala ike [end]
+wawa meli ale la meli li utala luka e oko ike li pana wawa e telo wawa tawa uta ike suli. kon ike li kalama li kama moli li weka walo lon tenpo lili.
+
+meli li tawa tan anpa supa.
+
+meli: "pali mi li pini. mi tawa."
+
+sina: "kon ike li pakala e noka mi."
+
+meli: "lon. kon ike li ike."
+
+ona li lukin ala e sina la ona li tawa.
+
+sina tawa tomo telo li telo e noka sina li len e selo pakala. pakala li ike mute ala.
+
+sina tawa supa lape. taso pakala sina li kama suli. sina tawa sewi. pakala li kama lili. ike a. sina ken ala lape lon supa.
+
+pona la kon ike li moli. <<linkreplace "taso supa lape sina li ike kin lon tenpo ni." t8n>>taso supa lape sina li ike kin lon tenpo ni.
+<<set $pini to 9>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: meli li sewi e luka ona. [end]
+meli: "ala a. mi wile lape. kon ike li kama sin lon tenpo pimeja la sina ken toki tawa mi lon tomo pi telo nasa."
+
+sina: "pona. tawa pona."
+
+meli li lon ala la sina moku lili.
+
+suno li weka e pilin pi tenpo pimeja. lon la kon ike li lon anu seme? ken la sina nasa lili. ken la meli li nasa kin.
+
+sina pilin ike lili. sina pilin e ni: sina toki ante la tenpo pimeja li ken pona mute tawa sina.
+
+sina wile lape li tawa supa lape. pona a. supa li ike ala ike? sina sona ala. taso sina sona e ni: <<linkreplace "ike kon li kama sin la ale li pona." t8n>>ike kon li kama sin la ale li pona.
+<<set $pini to 5>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
+:: PassageFooter
+<<script>>
+var s = ".";
+var i = "";
+var p = passage().split(" ");
+
+for (i in p){
+  if (/[a-z]/.test(p[i][0]) ){
+    s += p[i][0];
+	}
+}
+
+State.variables.nanpa = s;
+<</script>>
+@@.foot;
+┈┅┅━━🌒━━┅┅┈
+supa lape mi li ike v0.3.10
+
+<<set $nasin += $nanpa>>
+<<run UIBar.stow() >>
+@@
+
+:: lupa2
+tenpo ni la lupa li open pona. pimeja li lon.<<set $location to "tomo telo">> sina jo e telo wawa la tomo li jo ala e ijo pona.
+
+@@.act;[[sina tawa|tomo pi telo nasa]].@@
+<<timed 30s t8n>>@@.act; sina pilin e ni: ken la sina ken [[moku e telo wawa]].@@<</timed>>
+
+
+:: moku e telo wawa
+sina jan sona ala. sina open e poki pi telo wawa. kon wawa li utala e oko sina e nena sina. telo li wawa a.
+
+sina pilin e ni: telo ni li moku nasa. ni li moku ala. ni li telo wawa pi jaki ala.
+
+@@.act; [[sina pini e poki li tawa.|tomo pi telo nasa]] @@ 
+@@.act; [[sina moku e telo wawa.]]@@
+
+
+:: sina moku e telo wawa. [end]
+telo wawa li moku ala. taso sina moku ale e ona. insa sina li seli mute. <<linkreplace "telo li pakala e insa sina la sina anpa li kalama lili." t8n>>telo li pakala e insa sina la sina anpa li kalama lili.
+
+<<set $wawa -= 10>>\
+jan ala li kute e kalama pi moli sina.
+<<set $pini to 10>>\
+<<include "pini" t8n>>\
+<</linkreplace>> \
+
+
